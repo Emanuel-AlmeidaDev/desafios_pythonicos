@@ -11,8 +11,19 @@ Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
 def front_back(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    # +++ SOLUÇÃO v.1.0 +++
+    def get_front(string):
+        length = len(string)
+        index = length//2 + length % 2
+        return string[:index]
+
+    def get_back(string):
+        length = len(string)
+        index = length//2 + length % 2
+        return string[index:]
+
+
+    return get_front(a) +  get_front(b) + get_back(a) + get_back(b)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
