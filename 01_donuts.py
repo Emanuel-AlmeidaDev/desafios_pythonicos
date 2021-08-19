@@ -10,8 +10,11 @@ e donuts(23) retorna 'Number of donuts: many'
 """
 
 def donuts(count):
-    # +++ SUA SOLUÇÃO +++
-    return
+    # +++ SOLUÇÃO v1.0 +++
+    string = 'Number of donuts: {}'
+    if count >= 10:
+        return string.format('many')
+    return string.format(count)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
