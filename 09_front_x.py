@@ -13,7 +13,16 @@ antes de combina-las.
 
 def front_x(words):
     # +++ SUA SOLUÇÃO +++
-    return
+    words_start_with_x = []
+    words_not_start_with_x = []
+
+    for word in words:
+        if word[0] == 'x':
+            words_start_with_x.append(word)
+        else:
+            words_not_start_with_x.append(word)
+    
+    return sorted(words_start_with_x) + sorted(words_not_start_with_x)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
@@ -38,7 +47,7 @@ def test(f, in_, expected):
 if __name__ == '__main__':
     # Testes que verificam o resultado do seu código em alguns cenários.
     test(front_x, ['bbb', 'ccc', 'axx', 'xzz', 'xaa'],
-         ['xaa', 'xzz', 'axx', 'bbb', 'ccc'])
+        ['xaa', 'xzz', 'axx', 'bbb', 'ccc'])
     test(front_x, ['ccc', 'bbb', 'aaa', 'xcc', 'xaa'],
          ['xaa', 'xcc', 'aaa', 'bbb', 'ccc'])
     test(front_x, ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'],
