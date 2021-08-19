@@ -13,15 +13,9 @@ antes de combina-las.
 
 def front_x(words):
     # +++ SUA SOLUÇÃO +++
-    words_start_with_x = []
-    words_not_start_with_x = []
+    words_start_with_x = [word for word in words if word[0] == 'x']
+    words_not_start_with_x = [word for word in words if word[0] != 'x']
 
-    for word in words:
-        if word[0] == 'x':
-            words_start_with_x.append(word)
-        else:
-            words_not_start_with_x.append(word)
-    
     return sorted(words_start_with_x) + sorted(words_not_start_with_x)
 
 
