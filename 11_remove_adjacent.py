@@ -10,15 +10,13 @@ Irá retornar: [1, 2, 3]
 
 def remove_adjacent(n):
     # +++ SUA SOLUÇÃO +++
-    l = []
     if n == []:
         return []
-    # for i, current in enumerate(n[:-1]):
+
+    l = [n[0]]
     for current, next in zip(n[:-1], n[1:]):
         if current != next:
-            l.append(current)
-    
-    l.append(n[-1])
+            l.append(next)
 
     return l
 
