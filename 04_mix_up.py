@@ -9,7 +9,8 @@ Exemplo:
     'mix', 'pod' -> 'pox mid'
     'dog, 'dinner' -> 'dig donner'
 
-Assuma que a e b tem tamanho 2 ou maior.
+--- Assuma que a e b tem tamanho 2 ou maior.
+
 """
 
 def mix_up(a, b):
@@ -44,3 +45,5 @@ if __name__ == '__main__':
     test(mix_up, ('dog', 'dinner'), 'dig donner')
     test(mix_up, ('gnash', 'sport'), 'spash gnort')
     test(mix_up, ('pezzy', 'firm'), 'fizzy perm')
+    test(mix_up, ('a', 'b'), 'b a')
+    test(mix_up, ('', ''), ' ')
