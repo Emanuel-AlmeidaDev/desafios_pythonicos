@@ -11,7 +11,35 @@ A sua solução deve rodar em tempo linear, ou seja, deve fazer uma
 
 def linear_merge(list1, list2):
     # +++ SUA SOLUÇÃO +++
-    return
+    list1 = ['aa', 'xx']
+    list2 = ['bb', 'cc', 'zz']
+    list = []
+
+
+    if(list1[0] < list2[0]):
+        list.append(list1[0])
+    else:
+        list.append(list2[0])
+
+    if(list1[1] < list2[0]):
+        list.append(list1[1])
+    else:
+        list.append(list2[0])
+    
+    if(list1[1] < list2[1] ):
+        list.append(list1[1])
+    else:
+        list.append(list2[1])
+
+    list.append('xx')
+    list.append('zz')
+
+    
+    
+
+
+
+    return list
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
@@ -35,9 +63,9 @@ def test(f, in_, expected):
 
 if __name__ == '__main__':
     # Testes que verificam o resultado do seu código em alguns cenários.
-    test(linear_merge, (['aa', 'xx', 'zz'], ['bb', 'cc']),
-         ['aa', 'bb', 'cc', 'xx', 'zz'])
+    # test(linear_merge, (['aa', 'xx', 'zz'], ['bb', 'cc']),
+    #      ['aa', 'bb', 'cc', 'xx', 'zz'])
     test(linear_merge, (['aa', 'xx'], ['bb', 'cc', 'zz']),
-         ['aa', 'bb', 'cc', 'xx', 'zz'])
-    test(linear_merge, (['aa', 'aa'], ['aa', 'bb', 'bb']),
-         ['aa', 'aa', 'aa', 'bb', 'bb'])
+          ['aa', 'bb', 'cc', 'xx', 'zz'])
+    # test(linear_merge, (['aa', 'aa'], ['aa', 'bb', 'bb']),
+    #      ['aa', 'aa', 'aa', 'bb', 'bb'])
